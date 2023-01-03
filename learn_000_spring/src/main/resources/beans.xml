@@ -7,7 +7,9 @@
     <!-- https://spring.io/projects/spring-framework -->
     <!-- https://docs.spring.io/spring-framework/docs/5.3.24/reference/html/core.html#beans-factory-metadata -->
     <!-- Vamos a crear el bean manualmente, indicando la clase y el nombre del bean-->
-    <bean id="calculadora" class="es.david.Calculadora"></bean>
+    <bean id="calculadora" class="es.david.Calculadora" scope="prototype"></bean>
+    <!-- scope="prototype" decimos que cree siempre los objetos -->
+    <!-- scope="singleton" por defecto es simgleton -->
 
     <bean id="gestorFacturas" class="es.david.GestorFacturas">
         <constructor-arg name="calculadora" ref="calculadora" /> <!-- para hacer referencia a otro bean `ref`  -->

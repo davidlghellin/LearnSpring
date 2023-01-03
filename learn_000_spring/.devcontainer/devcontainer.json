@@ -42,6 +42,7 @@
 		,"vscode-icons-team.vscode-icons"
 		,"esbenp.prettier-vscode"
 		,"vscjava.vscode-java-pack"
+		,"eamodio.gitlens"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [

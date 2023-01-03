@@ -1,7 +1,6 @@
 package es.david;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -37,5 +36,9 @@ public class Main {
     // Creamos el gestor Facturas
     GestorFacturas gestorFacturas = (GestorFacturas) context.getBean("gestorFacturas");
     System.out.println(gestorFacturas.calculadora.holaMundo());
+
+    // 3 - Los beans por defecto son singleton
+    // se puede cambiar a scope prototype si queremos que siempre se creen
+    // Se suelen usar el singleton cuando suele ser servicios o cosas así, cuando no depende
   }
 }
