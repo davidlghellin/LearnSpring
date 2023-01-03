@@ -9,4 +9,9 @@
     <!-- Vamos a crear el bean manualmente, indicando la clase y el nombre del bean-->
     <bean id="calculadora" class="es.david.Calculadora"></bean>
 
+    <bean id="gestorFacturas" class="es.david.GestorFacturas">
+        <constructor-arg name="calculadora" ref="calculadora" /> <!-- para hacer referencia a otro bean `ref`  -->
+        <constructor-arg name="nombre" value="Facturator 3000" />
+    </bean>
+
 </beans>

@@ -1,6 +1,7 @@
 package es.david;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -19,7 +20,11 @@ public class Main {
     // Creamos el contexto a partir del fichero bean que hemos definido
     ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
-    // Obtenermos el bean, que tenemos que castear
+    // 1 - Instanciamos la calculadora de la manera tradicional
+    Calculadora calculadoraNormal = new Calculadora();
+    System.out.println(calculadoraNormal.holaMundo());
+
+    // 2 - Obtenemos el bean a traves de Spring framework, que tenemos que castear
     Calculadora calculadoraQueSaluda = (Calculadora) context.getBean("calculadora");
 
     String texto = calculadoraQueSaluda.holaMundo();
@@ -29,5 +34,8 @@ public class Main {
     String texto2 = calculadora2.holaMundo();
     System.out.println(texto2);
 
+    // Creamos el gestor Facturas
+    GestorFacturas gestorFacturas = (GestorFacturas) context.getBean("gestorFacturas");
+    System.out.println(gestorFacturas.calculadora.holaMundo());
   }
 }
