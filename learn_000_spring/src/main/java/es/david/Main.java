@@ -25,5 +25,9 @@ public class Main {
     String texto = calculadoraQueSaluda.holaMundo();
     System.out.println(texto);
 
+    Calculadora calculadora2 = (Calculadora) context.getBean("calculadora");
+    String texto2 = calculadora2.holaMundo();
+    System.out.println(texto2);
+
   }
 }

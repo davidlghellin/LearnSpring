@@ -5,6 +5,10 @@ package es.david;
 */
 public class Calculadora {
 
+  public Calculadora() {
+    System.out.println("Creamos constructor");
+  }
+
   public String holaMundo() {
     return "Hola mundo";
   }
