@@ -15,6 +15,9 @@ public class Coche {
     private String model;
     private Integer year;
 
+    // esta variable es para que el sonar nos de el code smell
+    private String noUso;
+
     public Coche() {
     }
 

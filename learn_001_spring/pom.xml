@@ -42,6 +42,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -52,5 +59,21 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- Optional URL to server. Default value is http://localhost:9000 -->
+				<sonar.host.url>
+					http://sonarqube:9000
+				</sonar.host.url>
+				<sonar.login>e7dcd0eacab4ff00888e562568249650a20166ab</sonar.login>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>
