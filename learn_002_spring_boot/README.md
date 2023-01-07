@@ -11,3 +11,10 @@ Para lanzar
 ```sh
 mvn clean compile exec:java -Dexec.mainClass="es.david.obrestdatajpa.ObRestDatajpaApplication"
 ```
+
+## Entidad Book
+
+- Book
+- BookRepository
+- BookService
+- BookController
