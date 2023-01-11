@@ -1,4 +1,4 @@
-package es.david.obrestdatajpa;
+package es.david.obrestdatajpa.entities;
 
 import java.time.LocalDate;
 
