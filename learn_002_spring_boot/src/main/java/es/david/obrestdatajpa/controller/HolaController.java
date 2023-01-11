@@ -11,4 +11,10 @@ public class HolaController {
         return "Hola mundo\n";
     }
 
+    @GetMapping("/bootstrap")
+    public String bootstrap(){
+        // no se usa el html. Usariamos por ejemplo el spring mvc
+        return "<h1>Prueba</h1>";
+    }
+
 }

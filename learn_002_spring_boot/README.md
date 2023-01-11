@@ -18,3 +18,13 @@ mvn clean compile exec:java -Dexec.mainClass="es.david.obrestdatajpa.ObRestDataj
 - BookRepository
 - BookService
 - BookController
+
+Se ha habilitado el primer endpoint muy simple.
+
+```sh
+http get 127.0.0.1:8080/hola
+curl -i  127.0.0.1:8080/hola
+```
+
+Por otro lado se ha añadido el swagger.
+<http://localhost:8080/swagger-ui/index.html>
