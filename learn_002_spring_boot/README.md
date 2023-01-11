@@ -28,3 +28,7 @@ curl -i  127.0.0.1:8080/hola
 
 Por otro lado se ha añadido el swagger.
 <http://localhost:8080/swagger-ui/index.html>
+
+```sh
+http get 127.0.0.1:8080/api/books
+```
