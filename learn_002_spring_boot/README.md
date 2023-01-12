@@ -31,4 +31,8 @@ Por otro lado se ha añadido el swagger.
 
 ```sh
 http get 127.0.0.1:8080/api/books
+
+http --form POST localhost:8080/api/books 'title'='Libro1' autor="DavidL" pages=12 price=12.2 releaseDate="2020-05-05" online=false
+
+http --form PUT localhost:8080/api/book 'title'='Libro13' autor="DavidL" pages=12 price=12.2 releaseDate="2020-05-05" online=false id=2
 ```

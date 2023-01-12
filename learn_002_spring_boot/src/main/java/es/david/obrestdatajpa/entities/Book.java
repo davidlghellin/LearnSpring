@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name = "books")
 public class Book {
@@ -19,6 +21,7 @@ public class Book {
     private String autor;
     private Integer pages;
     private Double price;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate releaseDate;
     private Boolean online;
 
